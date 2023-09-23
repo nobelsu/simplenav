@@ -21,7 +21,7 @@ export default function App() {
           },
           headerTitleAlign: 'center',
           tabBarLabelPosition: 'below-icon',
-          tabBarIcon: ({ color, size }) => (
+          tabBarIcon: ({ size }) => (
             <MaterialCommunityIcons name="home" color={"#90EE90"} size={size} />
           ),
         }}/>
@@ -35,7 +35,7 @@ export default function App() {
           },
           headerTitleAlign: 'center',
           tabBarLabelPosition: 'below-icon',
-          tabBarIcon: ({ color, size }) => (
+          tabBarIcon: ({ size }) => (
             <MaterialCommunityIcons name="information" color={"#90EE90"} size={size} />
           ),
         }}/>
@@ -49,7 +49,7 @@ export default function App() {
           },
           headerTitleAlign: 'center',
           tabBarLabelPosition: 'below-icon',
-          tabBarIcon: ({ color, size }) => (
+          tabBarIcon: ({ size }) => (
             <MaterialCommunityIcons name="phone" color={"#90EE90"} size={size} />
           ),
         }}/>
