@@ -1,18 +1,29 @@
-import { Text, View } from 'react-native';
+import { Text, View, Button, Pressable, StyleSheet } from 'react-native';
 
-function Home() {
+export default function Home() {
     return (
         <View>
-
-
+            <Text>Hi</Text>
         </View>
     );
 }
 
-function About() {
+export function About() {
     return (
         <View>
-
+            <Text>Hi 2</Text>
         </View>
     );
 }
+
+export function Contact() {
+    return (
+        <View>
+            <Text>Hi 3</Text>
+        </View>
+    );
+}
+
+const styles = StyleSheet.create({
+
+});
