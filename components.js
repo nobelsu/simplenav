@@ -36,7 +36,6 @@ const data = {
 const config = {
   animate: true,
   arrowIcon: "V",
-  openOnload: 0,
   expandIcon: "+",
   collapseIcon: "-",
 };
@@ -92,9 +91,12 @@ export default function Home() {
 
 export function About() {
   return (
-    <View>
-      <Text>Hi 2</Text>
-    </View>
+    <ScrollView
+      style={{
+        backgroundColor: "white",
+        flex: 1,
+      }}
+    ></ScrollView>
   );
 }
 
@@ -114,7 +116,7 @@ const styles = StyleSheet.create({
     padding: 8,
     marginLeft: 20,
     marginRight: 20,
-    shadowRadius: 10,
+    shadowRadius: 2,
   },
   title: {
     marginLeft: 20,
@@ -141,5 +143,6 @@ const styles = StyleSheet.create({
   },
   dropdown: {
     rowTitleColor: "green",
+    transitionDuration: "0.4s",
   },
 });
