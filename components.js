@@ -1,12 +1,13 @@
 import {
   Text,
   View,
-  Button,
+  TextInput,
   Pressable,
   StyleSheet,
   Image,
   ScrollView,
 } from "react-native";
+import { useState } from "react";
 import Faq from "react-faq-component";
 
 const data = {
@@ -141,9 +142,82 @@ export function About() {
 }
 
 export function Contact() {
+  const [clr, changerr] = useState("black");
+  const [bg, bgch] = useState("white");
+
   return (
-    <View>
-      <Text>Hi 3</Text>
+    <View
+      style={{
+        backgroundColor: "white",
+        flex: 1,
+      }}
+    >
+      <View style={styles.sep}>
+        <View
+          style={{
+            flex: 1,
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
+          <Image style={styles.logo2} source={require("./assets/icon.png")} />
+        </View>
+        <View
+          style={{
+            flex: 1,
+            justifyContent: "center",
+            margin: 20,
+            borderColor: "black",
+            borderWidth: 2,
+            borderRadius: 10,
+            backgroundColor: "#dcf7d7",
+            padding: 15,
+          }}
+        >
+          <Text
+            style={{
+              fontSize: 30,
+              fontWeight: "bold",
+              textAlign: "left",
+            }}
+          >
+            Contact Us!
+          </Text>
+          <TextInput
+            editable
+            maxLength={20}
+            placeholder={"What is your name?"}
+            style={styles.inp}
+          />
+          <TextInput
+            editable
+            maxLength={20}
+            placeholder={"What is your email?"}
+            style={styles.inp}
+          />
+
+          <Pressable
+            style={{
+              marginVertical: 10,
+              color: clr,
+              borderRadius: 8,
+              borderWidth: 2,
+              textAlign: "center",
+              maxWidth: 300,
+              backgroundColor: bg,
+              padding: 5,
+            }}
+            onPress={() => {
+              if (clr == "black") changerr("white");
+              else changerr("black");
+              if (bg == "white") bgch("green");
+              else bgch("white");
+            }}
+          >
+            Submit
+          </Pressable>
+        </View>
+      </View>
     </View>
   );
 }
@@ -192,6 +266,7 @@ const styles = StyleSheet.create({
   leftt: {
     flex: 1.2,
     justifyContent: "center",
+    alignItems: "center",
   },
   rightt: {
     flex: 0.7,
@@ -201,5 +276,13 @@ const styles = StyleSheet.create({
   logo2: {
     height: 150,
     width: 150,
+  },
+  inp: {
+    padding: 10,
+    borderRadius: 5,
+    borderWidth: 2,
+    borderColor: "black",
+    backgroundColor: "white",
+    marginVertical: 10,
   },
 });
